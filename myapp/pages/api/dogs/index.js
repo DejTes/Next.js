@@ -1,4 +1,4 @@
-import {getDogs, createDog, updateDog, destroyDog} from '@/utils/actions';
+import {getDogs, createDog} from '@/utils/actions';
 
 export default async function handler(req, res) {
     try {
