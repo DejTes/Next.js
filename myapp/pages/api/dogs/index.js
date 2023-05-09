@@ -3,10 +3,12 @@ import {getDogs, createDog} from '@/utils/actions';
 export default async function handler(req, res) {
     try {
         // Index route
-        if (req.method === 'GET') res.json(getDogs());
+        if (req.method === 'GET') res.json(await getDogs());
 
         // Create route
-        if (req.method === 'POST') res.json(createDog(req.body) ? getDogs() : {error: 'Dog not created'});
+        if (req.method === 'POST')
+            res.json
+                (await createDog(req.body) ? await getDogs() : {error: 'Dog not created'});
     
 
     // Anything else
